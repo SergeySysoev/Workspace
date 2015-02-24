@@ -2,11 +2,11 @@ import java.util.*;
 import java.io.*;
 
 
-public class Juice  {
+public class Juice {
     private ArrayList<String> components;
     private int count;
 
-    public Juice(){
+    public Juice() {
         this.components = new ArrayList<String>();
     }
 
@@ -18,6 +18,7 @@ public class Juice  {
         return count;
     }
 
+
     public void putComponents(ArrayList<String> components) {
         this.components = components;
     }
@@ -26,21 +27,20 @@ public class Juice  {
         this.count = count;
     }
 
-    class Compare implements Comparator<String>{
+    class Compare implements Comparator<String> {
         @Override
-        public int compare(String s1, String s2){
-            int c = minimum(s1.length(),s2.length());
-            for(int i = 0; i< c; i++){
-                if(s1.charAt(i) < s2.charAt(i))
-                {
+        public int compare(String s1, String s2) {
+            int c = minimum(s1.length(), s2.length());
+            for (int i = 0; i < c; i++) {
+                if (s1.charAt(i) < s2.charAt(i)) {
                     c = -1;
                     break;
                 }
-                if(s1.charAt(i) > s2.charAt(i)){
+                if (s1.charAt(i) > s2.charAt(i)) {
                     c = 1;
                     break;
                 }
-                if(s1.charAt(i) == s2.charAt(i))
+                if (s1.charAt(i) == s2.charAt(i))
                     c = 0;
             }
             return c;
