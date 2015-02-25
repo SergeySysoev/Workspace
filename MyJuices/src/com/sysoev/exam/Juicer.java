@@ -1,7 +1,5 @@
 package com.sysoev.exam;
 
-import com.sysoev.exam.Juice;
-
 import java.io.*;
 import java.util.*;
 
@@ -52,18 +50,20 @@ public class Juicer implements Runnable {
             PrintWriter out1 = new PrintWriter(new BufferedWriter(new FileWriter("juice1.out")));
             PrintWriter out2 = new PrintWriter(new BufferedWriter(new FileWriter("juice2.out")));
             Collections.sort(allComponents);
-            for(String s: components)
+            for (String s : components) {
                 out1.write(s + " ");
+            }
             out1.close();
-            for(String s: allComponents)
+            for (String s : allComponents) {
                 out2.write(s + " ");
+            }
             out2.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    class CountCompare implements Comparator<Juice> {
+    class CountComparator implements Comparator<Juice> {
         @Override
         public int compare(Juice j1, Juice j2) {
             int c = 0;
@@ -78,8 +78,8 @@ public class Juicer implements Runnable {
     public void washing() throws IOException {
         int washCount = 0;
         PrintWriter out = new PrintWriter("juice3.out");
-        Collections.sort(allJuices, new CountCompare());
-        for(Juice j: allJuices) {
+        Collections.sort(allJuices, new CountComparator());
+        for (Juice j : allJuices) {
             Collections.sort(j.getComponents());
         }
         for (int i = 0; i < allJuices.size() - 1; i++) {
