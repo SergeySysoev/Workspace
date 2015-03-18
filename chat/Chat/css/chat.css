@@ -1,0 +1,56 @@
+.chatArea{
+		width: 1060px;
+}
+h1{
+		margin-top: 1%;
+		color: #6334E3;
+		text-align: center; 
+		width: 1060px;
+
+}
+body{
+	background-color:#75A9F6;
+}
+.well{
+	height: 77px;
+	margin-left: 80%;
+	text-align: right;
+	width: 130px;
+}
+#nameApple{
+		text-align: center;
+		width: 120px;
+		height: 10px;
+}
+#chat {
+		margin-top: 2%;
+		margin-left: auto;
+		margin-bottom: auto;
+		margin-right: auto;
+		border: 1px solid #000000;
+		background-color: #ffffff;
+		height: 450px;
+		width: 700px;
+		overflow-x: none;
+		overflow-y: auto;
+}
+.username{
+		width: 360px;
+}
+h4{
+		color:#E61610;
+}
+.message{
+		height: 50px;
+		width: 700px;
+		border: 1px solid #000000;
+		overflow-y: auto;
+
+}
+.send{
+		text-align: center;
+		width: 120px;
+		height: 40px;
+		float: center;
+
+}
